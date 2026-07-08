@@ -128,13 +128,13 @@ footer{text-align:center;padding:60px 20px;opacity:.5;font-size:13px}
 <!-- PROFILE -->
 <section id="profile" class="fade">
   <div class="sec-title">👤 Profile</div>
-  <p class="profile-text">Client‑ and service‑oriented IT professional with <strong style="color:var(--cy)">20+ years</strong> of experience in international corporate environments. Strong background in enterprise service delivery, operational stability, and client‑facing operations across Central and Eastern Europe. My role typically sits between business operations and technical teams — ensuring complex services remain stable, measurable and efficient.</p>
+  <p class="profile-text">Client‑ and service‑oriented IT professional with <strong style="color:var(--cy)">20+ years</strong> of experience in international corporate environments. Strong background in enterprise service delivery, operational stability, and client‑facing operations across Central and Eastern Europe. My role typically sits between business operations and technical teams — ensuring complex services remain stable, measurable and efficient. Alongside operations work, I design and ship production tools end to end — PWAs, a native Android app, CI/CD pipelines, data scrapers and serverless backends (Cloudflare Workers).</p>
   <div class="stats">
     <div class="stat"><div class="stat-v" data-count="20">0</div><div class="stat-l">Years Experience</div></div>
     <div class="stat"><div class="stat-v" data-count="4">0</div><div class="stat-l">Global Companies</div></div>
     <div class="stat"><div class="stat-v" data-count="22">0</div><div class="stat-l">Engineers Managed</div></div>
-    <div class="stat"><div class="stat-v" data-count="4">0</div><div class="stat-l">Languages</div></div>
-    <div class="stat"><div class="stat-v" data-count="12">0</div><div class="stat-l">Tools Built</div></div>
+    <div class="stat"><div class="stat-v" data-count="5">0</div><div class="stat-l">Languages</div></div>
+    <div class="stat"><div class="stat-v" data-count="15">0</div><div class="stat-l">Tools Built</div></div>
   </div>
 </section>
 
@@ -248,6 +248,7 @@ footer{text-align:center;padding:60px 20px;opacity:.5;font-size:13px}
     <div class="lang"><span class="lang-flag">🇬🇧</span><div><div class="lang-name">English</div><div class="lang-level">Professional (C1)</div></div></div>
     <div class="lang"><span class="lang-flag">🇨🇿</span><div><div class="lang-name">Czech</div><div class="lang-level">Professional (B2)</div></div></div>
     <div class="lang"><span class="lang-flag">🇷🇺</span><div><div class="lang-name">Russian</div><div class="lang-level">Conversational (B1)</div></div></div>
+    <div class="lang"><span class="lang-flag">🇩🇪</span><div><div class="lang-name">German</div><div class="lang-level">Beginner (A2, learning — Swiss focus)</div></div></div>
 
   </div>
 </section>
@@ -320,9 +321,12 @@ document.getElementById('skillsGrid').innerHTML=SKILLS.map(s=>
 
 // ── PROJECTS DATA ──
 const PROJECTS=[
+  {icon:'🐟',title:'fish.taxi — Zero-Commission Taxi Platform',desc:'Full product ecosystem: client PWA in 7 languages, native Android driver app (Kotlin, foreground GPS), Cloudflare Workers + KV live tracking, signed APK with GitHub Actions CI/CD.',tags:['Kotlin','Cloudflare Workers','CI/CD','PWA'],url:'https://emillion-lab.github.io/fishtaxi/'},
+  {icon:'🛣️',title:'KAT — Road Risk Monitor',desc:'Statistical accident-risk forecasting for Sofia: weather codes, holidays, NOAA geomagnetic data and 18 years of national accident statistics via automated MVR data pipeline.',tags:['Forecasting','Data Pipeline','GitHub Actions'],url:'https://emillion-lab.github.io/KAT/'},
+  {icon:'🇪🇺',title:'FISH.EU — Market Expansion Planner',desc:'Subscription-economics simulator for platform market entry across 7 European cities: MRR, break-even, penetration and member-value (EV/Comfort) modeling.',tags:['Business Modeling','SaaS','BG/EN'],url:'https://emillion-lab.github.io/FISH.EU/'},
   {icon:'🚕',title:'FishBakshish',desc:'Sofia taxi-finding platform with real IAAA registry data. Client + driver apps with heatmap, filters and PWA install.',tags:['Taxi','Sofia','PWA','Leaflet'],url:'https://emillion-lab.github.io/FishBakshish/'},
-  {icon:'🔥',title:'BakshishApp – Sofia Demand',desc:'Real-time taxi demand heatmap for Sofia drivers. Live flight/weather data, shift scoring and zone hints.',tags:['Heatmap','Real-time','Drivers'],url:'https://emillion-lab.github.io/BAK/'},
-  {icon:'📊',title:'TaxiDB Pro',desc:'Full Sofia taxi registry analysis — 6000+ vehicles, expiring licenses, ownership tracking and migration data.',tags:['Registry','Analytics','IAAA'],url:'https://emillion-lab.github.io/TAXI/'},
+  {icon:'🔥',title:'BakshishApp – Sofia Demand',desc:'Real-time taxi demand heatmap for Sofia drivers. Live flight data via GitHub Actions scrapers, intercity bus arrivals aggregation, shift scoring and zone hints.',tags:['Heatmap','Real-time','Scrapers'],url:'https://emillion-lab.github.io/BAK/'},
+  {icon:'📊',title:'TaxiDB Pro',desc:'Full Sofia taxi registry analysis — 9,129 vehicles, 552 operators, expiring licenses, ownership tracking and migration data.',tags:['Registry','Analytics','IAAA'],url:'https://emillion-lab.github.io/TAXI/'},
   {icon:'💶',title:'UBER Driver Budget Calculator',desc:'Financial planning and income analysis for ride-share drivers across 40+ European cities.',tags:['Finance','Europe','Uber'],url:'https://emillion-lab.github.io/ABRP/'},
 
   {icon:'🌍',title:'Bulgaria Travel Guide',desc:'Offline-first guide to 30 Bulgarian cities, 591+ places in 14 languages. Single-file HTML.',tags:['Travel','14 Languages','Offline'],url:'https://emillion-lab.github.io/BGR/'},
