@@ -89,6 +89,22 @@ section{max-width:960px;margin:0 auto;padding:70px 20px}
 .proj-tag{font-size:10px;padding:2px 8px;border-radius:10px;background:rgba(102,224,255,.1);color:var(--cy);border:1px solid rgba(102,224,255,.2)}
 .proj-link{color:var(--cy);font-size:13px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
 .proj-link:hover{color:#fff}
+.flag{background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--brd);border-radius:16px;padding:26px;margin-bottom:18px;transition:.3s}
+.flag:hover{border-color:var(--cy);box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.flag-hdr{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.flag-icon{font-size:32px}
+.flag-title{font-size:20px;font-weight:800}
+.flag-sub{font-size:11px;color:var(--y);margin-top:3px;letter-spacing:.6px;text-transform:uppercase}
+.flag-lead{font-size:14px;line-height:1.75;opacity:.9;margin:14px 0 0}
+.flag-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+.flag-block h4{font-size:11px;color:var(--cy);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+.flag-block ul{padding-left:16px}
+.flag-block li{font-size:13px;line-height:1.65;opacity:.85;margin-bottom:4px}
+.flag-foot{margin-top:18px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.ai-box{background:var(--s1);border:1px solid rgba(102,224,255,.35);border-radius:16px;padding:26px}
+.pipe{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+.pipe span{font-size:11px;padding:7px 12px;border:1px solid var(--brd);border-radius:8px;background:var(--s2);color:var(--bl)}
+.pipe i{color:var(--mu);font-style:normal;align-self:center;font-size:12px}
 /* FOOTER */
 footer{text-align:center;padding:60px 20px;opacity:.5;font-size:13px}
 /* FADE IN */
@@ -114,6 +130,8 @@ footer{text-align:center;padding:60px 20px;opacity:.5;font-size:13px}
   </div>
   <nav>
     <a href="#profile">Profile</a>
+    <a href="#flagship">Flagship</a>
+    <a href="#ai">AI Workflow</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#languages">Languages</a>
@@ -128,13 +146,142 @@ footer{text-align:center;padding:60px 20px;opacity:.5;font-size:13px}
 <!-- PROFILE -->
 <section id="profile" class="fade">
   <div class="sec-title">👤 Profile</div>
-  <p class="profile-text">Client‑ and service‑oriented IT professional with <strong style="color:var(--cy)">20+ years</strong> of experience in international corporate environments. Strong background in enterprise service delivery, operational stability, and client‑facing operations across Central and Eastern Europe. My role typically sits between business operations and technical teams — ensuring complex services remain stable, measurable and efficient. Alongside operations work, I design and ship production tools end to end — PWAs, a native Android app, CI/CD pipelines, data scrapers and serverless backends (Cloudflare Workers). My current direction is <strong style="color:var(--cy)">AI-enabled service operations</strong>: I work with AI daily — GitHub Copilot in enterprise support work and LLM-assisted development across all 15 shipped tools — and I am building toward AIOps: applying AI to incident intelligence, knowledge management and service automation.</p>
+  <p class="profile-text">Client‑ and service‑oriented IT professional with <strong style="color:var(--cy)">20+ years</strong> of experience in international corporate environments. Strong background in enterprise service delivery, operational stability, and client‑facing operations across Central and Eastern Europe. My role typically sits between business operations and technical teams — ensuring complex services remain stable, measurable and efficient. Alongside operations work, I design and ship production tools end to end — PWAs, a native Android app, CI/CD pipelines, data scrapers and serverless backends (Cloudflare Workers). Two of them, <strong style="color:var(--cy)">fish.taxi</strong> and <strong style="color:var(--cy)">BAK</strong>, are live products with real users on the street in Sofia. My current direction is <strong style="color:var(--cy)">AI-enabled service operations</strong>: I work with AI daily — GitHub Copilot in enterprise support work and LLM-assisted development across all 15 shipped tools — and I am building toward AIOps: applying AI to incident intelligence, knowledge management and service automation.</p>
   <div class="stats">
     <div class="stat"><div class="stat-v" data-count="20">0</div><div class="stat-l">Years Experience</div></div>
     <div class="stat"><div class="stat-v" data-count="4">0</div><div class="stat-l">Global Companies</div></div>
     <div class="stat"><div class="stat-v" data-count="22">0</div><div class="stat-l">Engineers Managed</div></div>
     <div class="stat"><div class="stat-v" data-count="4">0</div><div class="stat-l">Languages</div></div>
     <div class="stat"><div class="stat-v" data-count="15">0</div><div class="stat-l">Tools Built</div></div>
+    <div class="stat"><div class="stat-v" data-count="40">0</div><div class="stat-l">GitHub Repos</div></div>
+  </div>
+</section>
+
+<!-- FLAGSHIP -->
+<section id="flagship" class="fade">
+  <div class="sec-title">🚀 Flagship Builds</div>
+
+  <div class="flag">
+    <div class="flag-hdr">
+      <span class="flag-icon">🐟</span>
+      <div>
+        <div class="flag-title">fish.taxi</div>
+        <div class="flag-sub">Live product · zero-commission taxi platform · Sofia</div>
+      </div>
+    </div>
+    <p class="flag-lead">A commission-free platform connecting passengers directly with drivers — designed, built and operated end to end by one person, and running in production with drivers on the street. Every layer is mine: the passenger app, the native driver app, the serverless backend, the admin console and the deployment pipeline. I also drive on it myself, so every design decision gets tested against the real job.</p>
+    <div class="flag-grid">
+      <div class="flag-block">
+        <h4>Product</h4>
+        <ul>
+          <li>Passenger PWA in 7 languages, offline-first, single-file architecture</li>
+          <li>Native Android driver app (Kotlin) with a foreground GPS service</li>
+          <li>Live destination search over Photon / Nominatim geocoding</li>
+          <li>Material 3 redesign track running in parallel with the live app</li>
+        </ul>
+      </div>
+      <div class="flag-block">
+        <h4>Backend &amp; operations</h4>
+        <ul>
+          <li>A single Cloudflare Worker plus KV is the entire live backend — no servers, no database to babysit</li>
+          <li>Seven-tab admin console behind WebAuthn, with AES-GCM encrypted storage</li>
+          <li>Dispatch, health and KV-inspection endpoints for daily operations</li>
+          <li>Signed APK built and released through GitHub Actions</li>
+        </ul>
+      </div>
+      <div class="flag-block">
+        <h4>Security posture</h4>
+        <ul>
+          <li>Zero live credentials in source — everything lives in KV and Worker secrets</li>
+          <li>Access is protected by rotation, not obfuscation: a compromised key is replaced, never hidden</li>
+          <li>Driver tokens compared in constant time</li>
+          <li>Offline driver coordinates masked before they leave the Worker</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flag-foot">
+      <a class="proj-link" href="https://fish.taxi" target="_blank">Open fish.taxi →</a>
+    </div>
+  </div>
+
+  <div class="flag">
+    <div class="flag-hdr">
+      <span class="flag-icon">🔥</span>
+      <div>
+        <div class="flag-title">BAK — Live Demand Intelligence</div>
+        <div class="flag-sub">Decision support for taxi drivers · Sofia · Zürich</div>
+      </div>
+    </div>
+    <p class="flag-lead">A full-screen operational picture built for split-second decisions: where demand is about to appear, what the roads look like, and how risky the next hour is. Multiple live feeds are fused into one ranked view of the city, refreshed continuously and readable at a glance from behind the wheel.</p>
+    <div class="flag-grid">
+      <div class="flag-block">
+        <h4>Live data fusion</h4>
+        <ul>
+          <li>Flight and intercity bus arrivals with adaptive caching around peaks</li>
+          <li>Weather-driven demand overlay and TomTom traffic feed</li>
+          <li>Event pipeline scraping theatre and ticketing sources</li>
+          <li>Ranked demand zones with automatic day / night theming</li>
+        </ul>
+      </div>
+      <div class="flag-block">
+        <h4>Data engineering</h4>
+        <ul>
+          <li>Road-risk engine rebuilt on 4,018 days of national accident statistics, on a 1–10 decile scale</li>
+          <li>The geomagnetic factor was measured and then dropped — the correlation analysis showed no signal, so it left the model</li>
+          <li>Coordinate audit corrected 30+ zone errors across the city grid</li>
+          <li>A dedicated watchdog repo monitors every deployed scraper</li>
+        </ul>
+      </div>
+      <div class="flag-block">
+        <h4>Portability</h4>
+        <ul>
+          <li>Adapted to Zürich: 27 zones, English UI with Züridütsch, Swiss transport API</li>
+          <li>Same engine, different city — the model is data-driven, not hard-coded to Sofia</li>
+          <li>Access gate shared with fish.taxi, issued and revoked centrally</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flag-foot">
+      <a class="proj-link" href="https://emillion-lab.github.io/BAK/" target="_blank">Open BAK →</a>
+    </div>
+  </div>
+</section>
+
+<!-- AI WORKFLOW -->
+<section id="ai" class="fade">
+  <div class="sec-title">🤖 How this gets built</div>
+  <div class="ai-box">
+    <p class="flag-lead">All of this ships alongside a full-time operations job, in a few hours a week. That is only possible because the entire delivery loop runs through an AI pair-developer wired directly into my repositories. Not "AI wrote some code" — a working method with its own tooling, guardrails and cost discipline.</p>
+    <div class="pipe">
+      <span>Chat (phone or desktop)</span><i>→</i><span>Self-built MCP connector</span><i>→</i><span>GitHub repo</span><i>→</i><span>Patch workflow</span><i>→</i><span>Cloudflare / Pages</span>
+    </div>
+    <div class="flag-grid">
+      <div class="flag-block">
+        <h4>The tooling</h4>
+        <ul>
+          <li>A Cloudflare Worker I wrote myself exposes GitHub to the model over MCP — read, patch, commit and dispatch workflows straight from a chat window</li>
+          <li>A persistent context repository the model reads at the start of every session: architecture, deploy paths, decisions taken and known landmines</li>
+          <li>The result is a complete development loop that runs from a phone in a parked car</li>
+        </ul>
+      </div>
+      <div class="flag-block">
+        <h4>The guardrails</h4>
+        <ul>
+          <li>Diagnosis before code — logs, diffs and live endpoints first, model second</li>
+          <li>Targeted patches against exact anchors, never full-file rewrites</li>
+          <li>Syntax gate before every deploy; rebase-and-retry on concurrent pushes</li>
+          <li>Deploys are always explicit — nothing reaches production as a side effect</li>
+        </ul>
+      </div>
+      <div class="flag-block">
+        <h4>The economics</h4>
+        <ul>
+          <li>Every task is routed to the cheapest model that can actually do it — mechanical edits, routine fixes, multi-file debugging and greenfield architecture each get a different tier</li>
+          <li>The same discipline I apply to service delivery: match the resource to the demand, measure it, and don't pay for capacity you don't need</li>
+        </ul>
+      </div>
+    </div>
+    <p class="flag-lead">This is the direction I want to bring into an operations role — AI applied to incident intelligence, knowledge management and service automation, by someone who has already built and run the pipeline rather than only read about it.</p>
   </div>
 </section>
 
@@ -323,9 +470,7 @@ document.getElementById('skillsGrid').innerHTML=SKILLS.map(s=>
 
 // ── PROJECTS DATA ──
 const PROJECTS=[
-  {icon:'🔥',title:'BAK — Live Taxi Demand Intelligence (Sofia)',desc:'Real-time driver decision-support platform: live flight & intercity bus arrivals with adaptive caching, weather-driven demand overlay, TomTom traffic feed, road-risk index, ranked demand zones, and auto/day-night theming. Full-screen map UI built for split-second driver decisions.',tags:['Real-time','Cloudflare Workers','Live Data','PWA'],url:'https://emillion-lab.github.io/BAK/'},
-  {icon:'🐟',title:'fish.taxi — Zero-Commission Taxi Platform',desc:'Full product ecosystem: client PWA in 7 languages, native Android driver app (Kotlin, foreground GPS), Cloudflare Workers + KV live tracking, signed APK with GitHub Actions CI/CD.',tags:['Kotlin','Cloudflare Workers','CI/CD','PWA'],url:'https://fish.taxi'},
-  {icon:'🛣️',title:'KAT — Road Risk Monitor',desc:'Statistical accident-risk forecasting for Sofia: weather codes, holidays, NOAA geomagnetic data and 18 years of national accident statistics via automated MVR data pipeline.',tags:['Forecasting','Data Pipeline','GitHub Actions'],url:'https://emillion-lab.github.io/KAT/'},
+  {icon:'🛣️',title:'KAT — Road Risk Monitor',desc:'Statistical accident-risk forecasting for Sofia: a 1–10 decile risk scale rebuilt on 4,018 days of national accident statistics, combined with weather codes and holidays through an automated data pipeline.',tags:['Forecasting','Data Pipeline','GitHub Actions'],url:'https://emillion-lab.github.io/KAT/'},
   {icon:'📊',title:'TaxiDB Pro',desc:'Full Sofia taxi registry analysis — 9,129 vehicles, 552 operators, expiring licenses, ownership tracking and migration data.',tags:['Registry','Analytics','IAAA'],url:'https://emillion-lab.github.io/TAXI/'},
   {icon:'💶',title:'ABRP v2 — European Relocation Income Calculator',desc:'Ride-share driver financial modeling across European cities: regulated day-tariff anchoring, occupancy-based earnings, monthly fixed-cost vehicle modeling, and side-by-side city comparison for relocation decisions.',tags:['Finance','Europe','Relocation'],url:'https://emillion-lab.github.io/ABRP/'},
 
@@ -419,6 +564,29 @@ CERTIFICATIONS
 LANGUAGES
 ---------
 Bulgarian (Native), English (C1), Czech (B2), Russian (B1)
+
+FLAGSHIP BUILDS
+---------------
+fish.taxi - zero-commission taxi platform, live in Sofia
+• Passenger PWA (7 languages), native Android driver app (Kotlin, foreground GPS)
+• Cloudflare Worker + KV backend, WebAuthn admin console, signed APK via GitHub Actions
+• No live credentials in source; access protected by rotation, not obfuscation
+• https://fish.taxi
+
+BAK - live demand intelligence for taxi drivers
+• Flight/bus arrivals, weather overlay, TomTom traffic, event scrapers, ranked demand zones
+• Road-risk engine on a 1-10 decile scale, rebuilt on 4,018 days of accident statistics
+• Adapted to Zurich (27 zones, Swiss transport API)
+• https://emillion-lab.github.io/BAK/
+
+AI-ASSISTED ENGINEERING
+-----------------------
+• Self-built MCP connector exposing GitHub to an AI pair-developer: read, patch,
+  commit and dispatch workflows directly from chat - including from a phone
+• Persistent context repository read at the start of every session
+• Guardrails: diagnosis before code, targeted patches over rewrites, syntax gate
+  before deploy, explicit deploys only
+• Model routing by task class to keep cost proportional to the work
 
 TOOLS & PROJECTS
 ----------------
