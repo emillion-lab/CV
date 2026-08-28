@@ -242,7 +242,8 @@ footer{text-align:center;padding:60px 20px;opacity:.5;font-size:13px}
       </div>
     </div>
     <div class="flag-foot">
-      <a class="proj-link" href="https://emillion-lab.github.io/BAK/" target="_blank">Open BAK →</a>
+      <a class="proj-link" href="https://emillion-lab.github.io/BAK/" target="_blank">Open BAK (Sofia) →</a>
+      <a class="proj-link" href="https://emillion-lab.github.io/ZUR/" target="_blank">Open ZUR (Zürich) →</a>
     </div>
   </div>
 </section>
@@ -470,6 +471,7 @@ document.getElementById('skillsGrid').innerHTML=SKILLS.map(s=>
 
 // ── PROJECTS DATA ──
 const PROJECTS=[
+  {icon:'🇨🇭',title:'ZUR — BAK for Zürich',desc:'The BAK demand engine ported to Switzerland: 27 zones, English UI with Züridütsch, Swiss public-transport API and local arrival feeds. Same data model, different city — built to prove the engine is not hard-coded to Sofia.',tags:['Switzerland','Live Data','Portability'],url:'https://emillion-lab.github.io/ZUR/'},
   {icon:'🛣️',title:'KAT — Road Risk Monitor',desc:'Statistical accident-risk forecasting for Sofia: a 1–10 decile risk scale rebuilt on 4,018 days of national accident statistics, combined with weather codes and holidays through an automated data pipeline.',tags:['Forecasting','Data Pipeline','GitHub Actions'],url:'https://emillion-lab.github.io/KAT/'},
   {icon:'📊',title:'TaxiDB Pro',desc:'Full Sofia taxi registry analysis — 9,129 vehicles, 552 operators, expiring licenses, ownership tracking and migration data.',tags:['Registry','Analytics','IAAA'],url:'https://emillion-lab.github.io/TAXI/'},
   {icon:'💶',title:'ABRP v2 — European Relocation Income Calculator',desc:'Ride-share driver financial modeling across European cities: regulated day-tariff anchoring, occupancy-based earnings, monthly fixed-cost vehicle modeling, and side-by-side city comparison for relocation decisions.',tags:['Finance','Europe','Relocation'],url:'https://emillion-lab.github.io/ABRP/'},
@@ -576,7 +578,7 @@ fish.taxi - zero-commission taxi platform, live in Sofia
 BAK - live demand intelligence for taxi drivers
 • Flight/bus arrivals, weather overlay, TomTom traffic, event scrapers, ranked demand zones
 • Road-risk engine on a 1-10 decile scale, rebuilt on 4,018 days of accident statistics
-• Adapted to Zurich (27 zones, Swiss transport API)
+• Adapted to Zurich as ZUR (27 zones, Swiss transport API): https://emillion-lab.github.io/ZUR/
 • https://emillion-lab.github.io/BAK/
 
 AI-ASSISTED ENGINEERING
